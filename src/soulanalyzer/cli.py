@@ -23,3 +23,6 @@ def train(csv: str = "data/Blabla.csv" ) -> None:
     #dataset = MLData(csv=csv)
     #analyzer = SoulAnalyzer(dataset)
 
+@app.command()
+def analyze_decision_tree(path_to_model: str = "results/trained_models/DecisionTreeClassfiere_model_42.joblib") -> None:
+    print("Decision Tree Analysis")
