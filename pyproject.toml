@@ -1,0 +1,33 @@
+[project]
+name = "soulanalyzer"
+version = "0.0.0"
+description = "TODO."
+authors = [
+    { name = "HokageM", email = "m.trzaska663@gmail.com" },
+    { name = "Anbu-A", email = "" }
+]
+dependencies = [
+    "typer>=0.3.2",
+    "pandas>=1.2.4",
+    "numpy>=1.20.3",
+    "scikit-learn>=0.24.2",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[project.scripts]
+soulanalyzer = "soulanalyzer.main:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/soulanalyzer"]
